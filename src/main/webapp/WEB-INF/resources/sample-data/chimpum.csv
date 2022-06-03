@@ -1,0 +1,7 @@
+key,code,creationMoment,title,description,startsAt,finishesAt,budget,link,key:item,key:inventor
+chimpum-01,2022-05-15,2022/05/15 15:22,Example 1,This is an example 1,2022/06/15 15:22,2022/07/15 15:22,EUR 100.00,https://google.com,item-01,inventor-01
+chimpum-02,2022-05-16,2022/05/16 15:22,Example 2,This is an example 2,2022/06/16 15:22,2022/07/16 15:22,GBP 125.00,https://google.com,item-02,inventor-01
+chimpum-03,2022-05-17,2022/05/17 15:22,Example 3,This is an example 3,2022/06/17 15:22,2022/07/17 15:22,EUR 186.00,https://google.com,item-03,inventor-01
+chimpum-04,2022-05-18,2022/05/18 15:22,Example 4,This is an example 4,2022/06/18 15:22,2022/07/18 15:22,GBP 122.00,https://google.com,item-04,inventor-01
+chimpum-05,2022-05-19,2022/05/19 15:22,Example 5,This is an example 5,2022/06/19 15:22,2022/07/19 15:22,USD 980.00,https://google.com,item-05,inventor-01
+chimpum-06,2022-05-20,2022/05/20 15:22,Example 6,This is an example 6,2022/06/20 15:22,2022/07/20 15:22,USD 10.00,https://google.com,item-06,inventor-01

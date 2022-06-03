@@ -20,6 +20,9 @@ inventor.item.form.button.create = Create
 inventor.item.form.button.delete = Delete
 inventor.item.form.button.update = Update
 inventor.item.form.button.publish = Publish
+
+inventor.item.form.button.chimpum.create = Create Chimpum
+
 inventor.label.moneyExchange = System's Currency
 inventor.item.title.codeNotUnique = This code is already in use
 

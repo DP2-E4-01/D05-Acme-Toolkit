@@ -1,0 +1,31 @@
+inventor.chimpum.list.label.code = Code
+inventor.chimpum.list.label.title = Title
+inventor.chimpum.list.label.startsAt = Starts At
+inventor.chimpum.list.label.finishesAt = Finishes At
+inventor.chimpum.list.label.budget = Budget
+
+inventor.chimpum.form.label.code = Code
+inventor.chimpum.form.label.creationMoment = Creation Moment
+inventor.chimpum.form.label.title = Title
+inventor.chimpum.form.label.description = Description
+inventor.chimpum.form.label.startsAt = Starts At
+inventor.chimpum.form.label.finishesAt = Finishes At
+inventor.chimpum.form.label.budget = Budget
+inventor.chimpum.form.label.link = Link
+inventor.chimpum.form.label.item = Associated Item Details
+inventor.chimpum.form.label.item.name = Name
+inventor.chimpum.form.label.item.code = Code
+inventor.chimpum.form.label.item.description = Description
+inventor.chimpum.form.label.item.retailPrice = Retail Price
+
+
+inventor.chimpum.form.button.create = Create
+inventor.chimpum.form.button.delete = Delete
+inventor.chimpum.form.button.update = Update
+
+inventor.chimpum.strongspam = Strong Spam 
+inventor.chimpum.weakspam =  Weak Spam  
+inventor.label.moneyExchange = System's Currency
+inventor.chimpum.title.codeNotUnique = This code is already in use
+
+inventor.chimpum.title.minPrice = Minimum price must be greater or equal than 0

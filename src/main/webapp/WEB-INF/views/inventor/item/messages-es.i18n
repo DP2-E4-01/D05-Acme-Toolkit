@@ -21,6 +21,8 @@ inventor.item.form.button.delete = Borrar
 inventor.item.form.button.update = Actualizar
 inventor.item.form.button.publish = Publicar
 
+inventor.item.form.button.chimpum.create = Crear Chimpum
+
 inventor.item.form.label.published = Publicado
 inventor.item.form.label.nonpublished = No publicado
 

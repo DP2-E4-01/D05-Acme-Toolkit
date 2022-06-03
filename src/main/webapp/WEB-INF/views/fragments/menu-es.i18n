@@ -65,6 +65,7 @@ master.menu.inventor = Inventor
 master.menu.inventor.toolkits = Listar toolkits propias
 master.menu.inventor.components = Listar componentes propios
 master.menu.inventor.tools = Listar tools propias
+master.menu.inventor.chimpums = Listar chimpums propios
 master.menu.inventor.patronage = Listar patronages propios
 
 
