@@ -31,4 +31,5 @@ inventor.item.title.codeNotUnique = Este código ya está en uso
 
 inventor.item.title.minPrice = El precio mínimo debe ser 0 o superior
 
-
+inventor.item.form.buttom.chimpum-list = Lista de Chimpum
+inventor.item.form.button.chimpum-create = Crear Chimpum
