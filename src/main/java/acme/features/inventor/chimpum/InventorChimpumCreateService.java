@@ -2,6 +2,7 @@ package acme.features.inventor.chimpum;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -35,6 +36,9 @@ public class InventorChimpumCreateService implements AbstractCreateService<Inven
 	
 	@Autowired
 	protected AdministratorConfigurationRepository configurationRepository;
+
+
+	private Calendar calendar2;
 	
 	@Override
 	public boolean authorise(final Request<Chimpum> request) {
@@ -162,6 +166,19 @@ public class InventorChimpumCreateService implements AbstractCreateService<Inven
 		errors.state(request,false, "finishesAt", "patron.patronage.error.menos-semana");
 		}
 		errors.state(request, this.configurationRepository.findConfiguration().getAcceptedCurr().contains(entity.getBudget().getCurrency()), "budget", "administrator.configuration.currency.notExist");
+		
+		
+		//if(entity.getCreation()!=null) {
+            final Calendar calendar2 = Calendar.getInstance();
+            calendar2.setTime(entity.getCreation());
+            final String day= String.format("%02d" , calendar2.get(Calendar.DAY_OF_MONTH));
+            final String month= String.format("%02d" , calendar2.get(Calendar.MONTH));
+            final String year = String.valueOf(calendar2.get(Calendar.YEAR)).substring(2);
+
+
+       // }
+        
+        System.out.println(day + "-" + month + "-" + year);
 	}
 	
 	@Override
