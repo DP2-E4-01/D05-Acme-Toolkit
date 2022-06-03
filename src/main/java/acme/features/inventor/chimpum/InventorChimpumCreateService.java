@@ -178,7 +178,7 @@ public class InventorChimpumCreateService implements AbstractCreateService<Inven
 
        // }
         
-        System.out.println(day + "-" + month + "-" + year);
+   
 	}
 	
 	@Override

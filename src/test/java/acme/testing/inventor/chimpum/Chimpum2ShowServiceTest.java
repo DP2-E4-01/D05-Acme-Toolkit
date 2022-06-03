@@ -27,6 +27,7 @@ public class Chimpum2ShowServiceTest extends TestHarness{
 		
 		super.clickOnListingRecord(recordIndex);
 		super.clickOnButton("List Chimpum");
+		super.checkListingExists();
 		
 		super.checkColumnHasValue(recordIndex, 0, code);
 		super.checkColumnHasValue(recordIndex, 1, creation);

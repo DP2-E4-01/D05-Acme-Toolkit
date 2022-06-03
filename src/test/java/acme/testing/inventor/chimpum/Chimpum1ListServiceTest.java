@@ -29,6 +29,7 @@ public class Chimpum1ListServiceTest extends TestHarness{
 		super.clickOnListingRecord(recordIndex);
 		super.clickOnButton("List Chimpum");
 		
+		super.checkListingExists();
 		super.checkColumnHasValue(recordIndex, 0, code);
 		super.checkColumnHasValue(recordIndex, 1, creation);
 		super.checkColumnHasValue(recordIndex, 2, title);
@@ -44,18 +45,5 @@ public class Chimpum1ListServiceTest extends TestHarness{
 
 	}
 	
-	@Test
-    @Order(30)
-    public void hackingTest() {
-        super.checkNotLinkExists("Account");
-        super.navigate("/inventor/item/list-component");
-        super.checkPanicExists();
-
-        super.signIn("patron1", "patron1");
-        super.navigate("/inventor/item/list-component");
-        super.checkPanicExists();
-        super.signOut();
-
-
-    }
+	
 }

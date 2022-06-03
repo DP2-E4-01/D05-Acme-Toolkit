@@ -37,6 +37,22 @@ public class Chimpum3CreateTest extends TestHarness{
 	super.fillInputBoxIn("link", link);
 	
 	super.clickOnSubmit("Create");
+	
+	super.clickOnMenu("Inventor", "List Own Components");
+	
+	super.checkListingExists();
+	
+	super.clickOnListingRecord(recordIndex);
+	super.clickOnButton("List Chimpum");
+	
+	super.checkListingExists();
+	super.checkColumnHasValue(recordIndex, 0, code);
+	super.checkColumnHasValue(recordIndex, 2, title);
+	super.checkColumnHasValue(recordIndex, 3, description);
+	super.checkColumnHasValue(recordIndex, 4, startsAt);
+	super.checkColumnHasValue(recordIndex, 5, finishesAt);
+	super.checkColumnHasValue(recordIndex, 6, budget);
+	super.checkColumnHasValue(recordIndex, 7, link);
 
 	super.signOut();
 	}
@@ -44,7 +60,7 @@ public class Chimpum3CreateTest extends TestHarness{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/chimpum/chimpumCreateN.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void InventorCreateChimpumNegativeTest(final int recordIndex,  
+	public void InventorCreateChimpumNegativeTest(final int recordIndex, final String code, 
 		final String title, final String description, final String startsAt, final String finishesAt, final String budget, 
 		final String link) {
 
@@ -57,6 +73,8 @@ public class Chimpum3CreateTest extends TestHarness{
 
 	super.clickOnButton("Create Chimpum");
 	
+	
+	super.fillInputBoxIn("code", code);
 	super.fillInputBoxIn("title", title);
 	super.fillInputBoxIn("description", description);
 	super.fillInputBoxIn("startsAt", startsAt);
@@ -66,18 +84,16 @@ public class Chimpum3CreateTest extends TestHarness{
 	
 	super.clickOnSubmit("Create");
 
-
+	super.checkErrorsExist();
+	
+	
 	super.signOut();
 	}
 	
-	@Test
-    @Order(10)
-    public void hackingTest() {
-
-		super.checkNotLinkExists("Account");
-        super.navigate("/inventor/item/list-component");
-        super.checkPanicExists();
+	
 
  
-    }
+    
+	
+	
 }

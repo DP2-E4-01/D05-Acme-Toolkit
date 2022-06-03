@@ -24,7 +24,7 @@
 	<acme:input-textbox readonly="true" code="inventor.chimpum.form.label.code" path="code"/>
 	<acme:input-moment readonly="true" code="inventor.chimpum.form.label.creation" path="creation"/>	
 	<acme:input-textbox  readonly="true" code="inventor.chimpum.form.label.title" path="title"/>
-	<acme:input-textbox  readonly="true" code="inventor.chimpum.form.label.desription" path="description"/>
+	<acme:input-textbox  readonly="true" code="inventor.chimpum.form.label.description" path="description"/>
 	<acme:input-moment readonly="true" code="inventor.chimpum.form.label.startsAt" path="startsAt"/>
 	<acme:input-moment readonly="true" code="inventor.chimpum.form.label.finishesAt" path="finishesAt"/>
 	<acme:input-money readonly="true" code="inventor.chimpum.form.label.budget" path="budget"/>
