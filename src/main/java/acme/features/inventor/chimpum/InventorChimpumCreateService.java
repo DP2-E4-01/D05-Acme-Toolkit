@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 import acme.entities.chimpum.Chimpum;
 import acme.entities.configuration.Configuration;
 import acme.entities.item.Item;
+import acme.entities.item.ItemType;
+import acme.entities.item.Status;
 import acme.entities.patronage.Patronage;
 import acme.features.administrator.configurations.AdministratorConfigurationRepository;
 import acme.framework.components.models.Model;
@@ -39,14 +41,18 @@ public class InventorChimpumCreateService implements AbstractCreateService<Inven
 		assert request != null;
 
 		boolean result;
+		
 		int itemId;
 		Item item;
 
 		itemId = request.getModel().getInteger("id");
 		item = this.repository.findItemById(itemId);
-		result = request.getPrincipal().getActiveRoleId() == item.getInventor().getId();
-
-		return result;
+		result = request.getPrincipal().getActiveRoleId() == item.getInventor().getId() ;
+		boolean result2;
+		result2 = (result) && item.getStatus().equals(Status.NON_PUBLISHED);
+		//boolean result3;
+		//result3= item.getType().equals(ItemType.TOOL);
+		return result2; 
 	}
 	
 	@Override

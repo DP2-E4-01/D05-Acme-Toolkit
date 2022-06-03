@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.chimpum.Chimpum;
+import acme.entities.item.Status;
 import acme.entities.patronage.Patronage;
 import acme.entities.patronagereport.PatronageReport;
 import acme.framework.components.models.Model;
@@ -30,7 +31,18 @@ public class InventorChimpumDeleteService implements AbstractDeleteService<Inven
 
 	@Override
 	public boolean authorise(final Request<Chimpum> request) {
-		return true;
+		boolean res;
+		int chimpumId;
+		Chimpum chimpum;
+
+		chimpumId = request.getModel().getInteger("id");
+		chimpum = this.repository.findOneChimpumById(chimpumId);
+		res = chimpum != null && chimpum.getArtefact().getInventor().getId() == request.getPrincipal().getActiveRoleId();
+		boolean result2;
+		result2 = (res) && chimpum.getArtefact().getStatus().equals(Status.NON_PUBLISHED);
+		//boolean result3;
+		//result3= chimpum.getArtefact().getType().equals(ItemType.TOOL);
+		return result2;
 	}
 
 	@Override
