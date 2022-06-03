@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.chimpum.Chimpum;
+import acme.entities.item.Item;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractListService;
@@ -21,7 +22,16 @@ public class InventorChimpumListByItemsService implements AbstractListService<In
 	public boolean authorise(final Request<Chimpum> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int itemId;
+		Item item;
+
+		itemId = request.getModel().getInteger("id");
+		item = this.repository.findItemById(itemId);
+		result = request.getPrincipal().getActiveRoleId() == item.getInventor().getId();
+		//boolean result3;
+		//result3= item.getType().equals(ItemType.TOOL);
+		return result;
 	}
 	
 	@Override

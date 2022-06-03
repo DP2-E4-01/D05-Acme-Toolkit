@@ -26,7 +26,8 @@ public class InventorChimpumShowService implements AbstractShowService<Inventor,
 		chimpumId = request.getModel().getInteger("id");
 		chimpum = this.repository.findOneChimpumById(chimpumId);
 		res = chimpum != null && chimpum.getArtefact().getInventor().getId() == request.getPrincipal().getActiveRoleId();
-
+		//boolean result3;
+		//result3= item.getType().equals(ItemType.TOOL);
 		return res;
 	}
 	

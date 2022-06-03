@@ -21,14 +21,23 @@
 			<acme:input-textbox code="inventor.item.form.label.link" path="link" readonly="true"/>
 			<acme:input-textbox code="inventor.item.form.label.status" path="status" readonly= "true"/>
 			<acme:input-textbox code="inventor.item.form.label.type" path="type" readonly= "true"/>
-			<acme:button code="inventor.item.form.buttom.chimpum-list" action="/inventor/chimpum/list-by-item?id=${id}"/>
-			<acme:button code="inventor.item.form.button.chimpum-create" action="/inventor/chimpum/create?id=${id}"/>
+			
 		
 			<jstl:if test="${status == 'NON_PUBLISHED' }">
-				<acme:submit code="inventor.item.form.button.delete" action="/inventor/item/delete"/>
+				<acme:submit code="inventor.item.form.button.delete" action="/inventor/item/delete?id=${id}"/>
 				<acme:button code="inventor.item.form.button.update" action="/inventor/item/update?id=${id}"/>	
 				<acme:submit code="inventor.item.form.button.publish" action="/inventor/item/publish"/>	
+				
+				<acme:button code="inventor.item.form.buttom.chimpum-list" action="/inventor/chimpum/list-by-item?id=${id}"/>
+				<acme:button code="inventor.item.form.button.chimpum-create" action="/inventor/chimpum/create?id=${id}"/>
 			</jstl:if>
+			<!--
+				<jstl:if test="${status == 'NON_PUBLISHED'  && type ==Tool}">
+					<acme:submit code="inventor.item.form.button.delete" action="/inventor/item/delete?id=${id}"/>
+					<acme:button code="inventor.item.form.button.update" action="/inventor/item/update?id=${id}"/>	
+					<acme:submit code="inventor.item.form.button.publish" action="/inventor/item/publish"/>	
+				</jstl:if>
+			-->
 		</jstl:when>
 	
 		<jstl:when test="${command == 'create'}">
