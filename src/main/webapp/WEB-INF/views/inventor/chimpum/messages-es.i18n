@@ -12,7 +12,7 @@
 	inventor.chimpum.form.label.code=Codigo
 	inventor.chimpum.form.label.creation=Momento de creacion
 	inventor.chimpum.form.label.title= Titulo
-	inventor.chimpum.form.label.desription= Descripcion
+	inventor.chimpum.form.label.description= Descripcion
 	inventor.chimpum.form.label.startsAt= Periodo1
 	inventor.chimpum.form.label.finishesAt=Periodo2
 	inventor.chimpum.form.label.budget= Precio
@@ -39,3 +39,9 @@
 	inventor.chimpum.list.label.link=Link
 	inventor.chimpum.list.label.item.identify.code=Codigo
 
+	inventor.chimpum.form.button.create = Crear
+	
+	inventor.chimpum.form.label.update = Actualizar
+	inventor.chimpum.form.label.delete = Borrar
+
+	inventor.chimpum.form.button.update = Actualizar

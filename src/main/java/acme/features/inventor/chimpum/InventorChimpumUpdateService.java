@@ -73,20 +73,10 @@ public class InventorChimpumUpdateService implements AbstractUpdateService<Inven
 		assert entity != null;
 		assert errors != null;
 		
-		final List<Item> items = this.repository.findItemsWithChimpum();
-        for(final Item i:items) {
-            if(i.getId()==entity.getArtefact().getId()) {
-                errors.state(request, false, "title", "inventor.messages.form.error.duplicate");
-            }
-        }
-
 		
 		
-    	final Chimpum chimpum = this.repository.findChimpumByCode(entity.getCode());
 		
-		if(chimpum != null) {
-			errors.state(request, chimpum.getId() == entity.getId(), "code", "inventor.item.title.codeNotUnique");
-		}
+    	
  
 		errors.state(request, entity.getBudget().getAmount() > 0.00, "budget", "authenticated.patron.patronage.list.label.priceGreatherZero");
 
